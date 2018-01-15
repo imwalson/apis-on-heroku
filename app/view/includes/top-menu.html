@@ -1,0 +1,16 @@
+<div class="top-menu" style="position: fixed;height: 60px;top: 0;left: 0;right: 0;z-index: 99;">
+    <ul class="ivu-menu ivu-menu-primary ivu-menu-horizontal">
+        {% for item in globalConfig.menus %}
+        <li class="
+        ivu-menu-item 
+        {% if current == item.href %} ivu-menu-item-active ivu-menu-item-selected {% endif %} " onclick="gotoHref('{{ item.href }}')">
+            <i class="ivu-icon {{ item.icon }}"></i> {{ item.name }}
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+<script>
+    function gotoHref(url) {
+        location.href = url;
+    }
+</script>
