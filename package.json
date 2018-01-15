@@ -25,6 +25,7 @@
     "node": ">=6.0.0"
   },
   "scripts": {
+    "deploy": "egg-scripts start",
     "start": "egg-scripts start --daemon",
     "stop": "egg-scripts stop",
     "dev": "egg-bin dev",
