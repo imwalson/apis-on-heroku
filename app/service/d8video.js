@@ -2,17 +2,6 @@
 const Service = require('egg').Service;
 const axios = require('axios');
 
-// const HOST = 'email.d8dizhi.at.gmail.com.d8-app.space';
-// const baseURL = 'http://email.d8dizhi.at.gmail.com.d8-app.space';
-// const videoUrlBase = 'http://email.d8dizhi.at.gmail.com.8spd.space';
-// const apiMap = {
-//   newest: '/api/v2/videos/latest', // 最新视频
-//   videoTags: '/api/v2/tags/alphabet', // 视频标签列表
-//   videoList: '/api/v2/videos',  // 视频列表
-//   videoInfo: '/api/v2/video/', // 视频详情
-//   videoPath: '/v/video_v_href/' // 获取视频文件地址
-// }
-
 
 // 生成随机 fingerprint
 function fingerprintGenerater() {
@@ -185,6 +174,7 @@ class D8videoService extends Service {
         }
       });
       return res.data;
+      // <html><body><script>document.cookie="vDDoS=960b7b1cf83fa48a5a80635820bb6ef3 ; path=/";location.href="http://email.d8dizhi.at.gmail.com.8spd.space/v/video_v_href/22167?flag=0&d=3&fingerprint=fingerprintkey-RFDdmyrccNRHpdBdh";</script></body></html>
     } catch (error) {
       console.log(error.request);
       if (error.response) {

@@ -1,5 +1,4 @@
 'use strict';
-const fs = require('fs');
 const axios = require('axios');
 
 module.exports = app => {
@@ -46,8 +45,16 @@ module.exports = app => {
       const id = this.ctx.params.id || '';
 
       const res = await this.ctx.service.d8video.videoPath(id);
+      //console.log(res);
       this.ctx.body = res;
     }
+
+    async test() {
+      const res = await axios.get('http://127.0.0.1:7001/d8v/videoPath/22167');
+      console.log(res.data);
+      this.ctx.body = res.data;
+    }
+
 
   }
 

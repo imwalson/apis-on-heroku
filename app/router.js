@@ -11,6 +11,7 @@ module.exports = app => {
   app.get('/d8v/videos', 'd8video.videoList');
   app.get('/d8v/video/:key', 'd8video.videoInfo');
   app.get('/d8v/videoPath/:id', 'd8video.videoPath');
+  app.get('/d8v/test', 'd8video.test');
 
 
 };
